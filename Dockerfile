@@ -7,5 +7,5 @@ COPY --from=builder /go/bin/envsubst /usr/local/bin/envsubst
 
 ADD ./entrypoint.sh /usr/local/bin/entrypoint
 
-ENTRYPOINT [ "entrypoint" ]
+ENTRYPOINT [ "/usr/local/bin/entrypoint" ]
 
