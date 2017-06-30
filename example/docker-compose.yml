@@ -1,9 +1,15 @@
 version: '3.2'
 services:
-  prometheus:
+  not-found:
+    image: 'cirocosta/prom'
+
+  working:
     image: 'cirocosta/prom'
     volumes:
-      - './prometheus.yml:/etc/prometheus/prometheus.env.yml'
-    ports:
-      - '9090:9090'
-    network_mode: 'host'
+      - './prometheus.working.yml:/etc/prometheus/prometheus.env.yml'
+
+  unset:
+    image: 'cirocosta/prom'
+    volumes:
+      - './prometheus.unset.yml:/etc/prometheus/prometheus.env.yml'
+        

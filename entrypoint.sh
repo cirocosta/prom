@@ -1,5 +1,7 @@
 #!/bin/sh
 
+set -o errexit
+
 BASE_FILE="/etc/prometheus/prometheus.env.yml"
 DEST_FILE="/etc/prometheus/prometheus.yml"
 
@@ -9,7 +11,7 @@ if [ -f "$BASE_FILE" ]; then
     Going to substitute it with its counterpart having
     all environment variables substituted ($DEST_FILE)
     "
-  cat $BASE_FILE | envsubst > $DEST_FILE
+  cat $BASE_FILE | envsubst -no-unset > $DEST_FILE
 
   echo "INFO:
     Done!
