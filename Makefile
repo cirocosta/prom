@@ -1,4 +1,8 @@
 image:
 	docker build -t cirocosta/prom .
 
-.PHONY: image
+example:
+	cd ./example && \
+		docker-compose up
+
+.PHONY: image example

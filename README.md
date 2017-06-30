@@ -6,3 +6,10 @@ Usage is the same as you would for `prom/prometheus` but requires writing the co
 
 The image is just a wrap around [github.com/a8m/envsubst](https://github.com/a8m/envsubst) and the original Prometheus Docker image.
 
+## Examples
+
+See `./example`.
+
+## LICENSE
+
+MIT
